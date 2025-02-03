@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section {
+            border: 1px black solid;
+        }
+        for-recruiters {
+            background-color: lightcoral;
+            border: 1px dashed #ccc;
+        }
+        hello-world {
+            display: none;
+        }
+    </style>
+    <script>
+        class HelloWorld extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello world!");
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/nicholas-ngyn" target="_blank"><button>LinkedIn</button></a></li>
+                <li><a href="mailto:nicholas.ngyn@gmail.com"><button>Email</button></a></li>
+                <li><a href="https://github.com/nicholas-ngyn" target="_blank"><button>GitHub</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <hgroup>
+                <h1>Nicholas Nguyen</h1>
+                <h2>"Mr Cool Guy"</h2>
+                <hello-world></hello-world>
+            </hgroup>
+        </section>
+        <hr/>
+
+        <section>
+            <div>
+                <iframe src="/images/Nicholas_Resume.pdf" width="400px" height="600px" title="Nicholas Resume"></iframe>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="images/pfpcool.jpg" type="image/jpeg">
+                    <img src="images/pfpcool.jpg" alt="Profile Picture">
+                </picture>
+                <blockquote>
+                    "Code is like humor. When you have to explain it, it’s bad." - <cite>Cory House</cite>
+                </blockquote>
+                <h2>About Me</h2>
+                <h3>Intro:</h3>
+                <for-recruiters>
+                    Hi, I'm Nicholas Nguyen.
+                    <br/>
+                    I'm a student at the <abbr title="University of California, San Diego">UCSD</abbr> studying <i><b>Computer Science.</b></i>
+                    <del>I'm a software developer with a passion for creating and developing software.</del>
+                    <ins>I am now focusing on full-stack web development with an interest in AI and machine learning.</ins>
+                    I'm always looking for new opportunities to learn and grow as a developer.
+                    <span>Please shoot me an email if you're hiring!</span>
+                </for-recruiters>
+                <p>I like playing badminton, swimming, video games, and <strong><em>LEETCODE!</em></strong></p>
+                <aside>
+                    <details>
+                        <summary>Other Quick Facts</summary>
+                        <ol>
+                            <li>Java is my favorite</li>
+                            <li>Interested in AI and Web Development</li>
+                            <li>Born & raised in San Diego, CA</li>
+                        </ol>
+                    </details>
+                    <h3>My Very First Code:</h3>
+                    <pre><code>print("Hello, World!")</code></pre>
+                    <h3>My Favorite Meme!!!</h3>
+                    <audio controls>
+                        <source src="audio/lebron-james.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <video width="320" height="240" controls>
+                        <source src="video/4o4Knluz.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </aside>
+            </div>
+        </section>
+        <hr/>
+
+        <section>
+            <h2><for-recruiters>Skills</for-recruiters></h2>
+            <table>
+                <caption>My Technical Skills</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>Language</th>
+                    <th>Proficiency</th>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Expert</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Intermediate</td>
+                </tr>
+            </table>
+        </section>
+        <hr/>
+
+        <section>
+            <h2>Let's get to know each other:</h2>
+            <form>
+                <fieldset>
+                    <legend>Favorite Programming Language</legend>
+                    <label for="favorite-lang">What's your favorite programming language?</label>
+                    <input list="languages" id="favorite-lang" name="favorite-lang">
+                    <datalist id="languages">
+                        <option value="Java"></option>
+                        <option value="Python"></option>
+                        <option value="C++"></option>
+                        <option value="JavaScript"></option>
+                    </datalist>
+                    <button type="submit">Submit</button>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Car Preference</legend>
+                    <label for="cars">Choose a car:</label>
+                    <select name="cars" id="cars">
+                        <optgroup label="Japanese Cars">
+                            <option value="nissan gtr">Nissan GTR</option>
+                            <option value="toyota supra">Toyota Supra</option>
+                        </optgroup>
+                        <optgroup label="German Cars">
+                            <option value="audi RS7">Audi RS7</option>
+                            <option value="bmw m4 comp">BMW M4 Competition</option>
+                        </optgroup>
+                    </select>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+        
+        <hr/>
+
+        <section>
+            <h2><for-recruiters>Projects</for-recruiters></h2>
+            <search>
+                <label for="project-search">Search for a project:</label>
+                <input type="text" id="project-search" name="project-search" placeholder="Search projects...">
+                <button type="submit">Search</button>
+            </search>
+
+            <template>
+                <div class="project">
+                    <figure>
+                        <a href="https://github.com/cse110-sp24-group8/cse110-sp24-group8">
+                            <img src="images/journal.jpeg" alt="Project 3">
+                        </a>
+                        <figcaption>
+                            <h3>Dev Journal</h3>
+                            <p>A journal for developers.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </template>
+
+            <div class="project">
+                <figure>
+                    <a href="https://github.com/yourusername/project1">
+                        <img src="images/iclicker.jpeg" alt="Project 1">
+                    </a>
+                    <figcaption>
+                        <h3>WebClicker++</h3>
+                        <p>A new replacement for iclickers at UCSD.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="project">
+                <figure>
+                    <a href="https://github.com/CSES-Open-Source/LowPriceCenter">
+                        <img src="images/lpcenter.png" alt="Project 2">
+                    </a>
+                    <figcaption>
+                        <h3>Low-Price Center</h3>
+                        <p>Low-Price Center is designed to help UCSD students exchange and sell goods in a streamlined, centralized way. Instead of posting to Reddit or other similar websites, they'll have a more secure and organized place to buy and sell goods with each other on campus. It will also be a resource for student organizations to sell merchandise without having to build their own portals.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>Programming Glossary</h2>
+            <dl>
+                <dt><dfn>Java</dfn></dt>
+                <dd>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</dd>
+        
+                <dt><dfn>JavaScript</dfn></dt>
+                <dd>JavaScript is a programming language that enables interactive web pages. It is an essential part of the web application stack, along with HTML and CSS.</dd>
+        
+                <dt><dfn>Python</dfn></dt>
+                <dd>Python is an interpreted, high-level, general-purpose programming language. It is widely used for web development, automation, data analysis, and artificial intelligence.</dd>
+        
+                <dt><dfn>Node.js</dfn></dt>
+                <dd>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine, designed to build scalable network applications.</dd>
+        
+                <dt><dfn>Keyboard Input</dfn></dt>
+                <dd><kbd>Ctrl + C</kbd> is commonly used to copy selected text in many applications, while <kbd>Ctrl + V</kbd> is used to paste it.</dd>
+            </dl>
+        </section>
+        <canvas id="myCanvas" width="400" height="100"></canvas>
+        <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "blue";
+            ctx.fillRect(20, 20, 100, 50);
+        </script>
+        <svg width="200" height="200">
+            <circle cx="100" cy="100" r="80" stroke="black" stroke-width="3" fill="lightblue" />
+            <rect x="50" y="50" width="100" height="100" stroke="black" stroke-width="3" fill="yellow" />
+        </svg>
+    </main>
+
+    <footer>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Get in Touch</legend>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </fieldset>
+        </form>
+        <p><address>Contact me at <a href="mailto:nicholas.ngyn@gmail.com">nicholas.ngyn@gmail.com</a></address></p>
+        <dialog>
+            <h2>Thank you for your message!</h2>
+            <p>Your message has been sent successfully.</p>
+        </dialog>
+    </footer>
+    <noscript>
+        <p>JavaScript is disabled on your browser. Some features may not work properly.</p>
+    </noscript>
+</body>
+</html>
