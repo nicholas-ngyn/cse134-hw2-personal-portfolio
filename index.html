@@ -35,6 +35,13 @@
                 <li><a href="https://github.com/nicholas-ngyn" target="_blank">GitHub</a></li>
             </ul>
         </nav>
+        <search>
+            <form action="/search" method="get">
+              <label for="searchInput">Search:</label>
+              <input type="text" id="searchInput" name="q" placeholder="Search the site...">
+              <button type="submit">Search</button>
+            </form>
+          </search>
     </header>
 
     <main>
@@ -63,7 +70,7 @@
                 <h3>Intro:</h3>
                 <for-recruiters>
                     Hi, I'm Nicholas Nguyen.
-                    <br/>
+                    <br>
                     I'm a student at the <abbr title="University of California, San Diego">UCSD</abbr> studying <i><b>Computer Science.</b></i>
                     <del>I'm a software developer with a passion for creating and developing software.</del>
                     <ins>I am now focusing on full-stack web development with an interest in AI and machine learning.</ins>
@@ -162,13 +169,6 @@
 
         <section>
             <h2><for-recruiters>Projects</for-recruiters></h2>
-            <div>
-                <search>
-                    <label for="project-search">Search for a project:</label>
-                    <input type="text" id="project-search" name="project-search" placeholder="Search projects...">
-                    <button type="submit">Search</button>
-                </search>    
-            </div>
             
             <template>
                 <div class="project">
